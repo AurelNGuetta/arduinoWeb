@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telo Web</title>
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/vroom.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenLite.min.js"></script>
+	<script type="text/javascript" src="js/vroom.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
     <div class="main">
@@ -14,6 +23,12 @@
             <form action="#" method="post">
                 <div class="items">
                     <div class="title"><h1>Moteur Gauche</h1></div>
+                    <div id="gauge" style="margin: 0 auto;">
+                        <div id="circle"></div>
+                        <div id="numbers"></div>
+                        <div id="mi-km"></div>
+                        <div id="needle"></div>
+                    </div>
                     <div class="forms">
                         <div class="item">
                             <label for="directionLeft">Direction</label>
@@ -25,8 +40,9 @@
                             </span>
                         </div>
                         <div class="item">
-                            <label for="speedLeft">Vitesse</label>
-                            <input type="number" name="speedLeft" id="speedLeft">
+                            <label for="speedRight">Vitesse</label>
+                            <input type="number" name="kilometers" id="kilometers" /> <br>
+                            <input type="hidden" name="miles" id="miles" />
                         </div>
                         <div class="item">
                             <label for="consoLeft">Consommation</label>
@@ -45,6 +61,12 @@
                 </div>
                 <div class="items">
                     <div class="title"><h1>Moteur Droit</h1></div>
+                    <div id="gauge2" style="margin: 0 auto;">
+                        <div id="circle2"></div>
+                        <div id="numbers2"></div>
+                        <div id="mi-km2"></div>
+                        <div id="needle2"></div>
+                    </div>
                     <div class="forms">
                         <div class="item">
                             <label for="directionRight">Direction</label>
@@ -57,7 +79,8 @@
                         </div>
                         <div class="item">
                             <label for="speedRight">Vitesse</label>
-                            <input type="number" name="speedRight" id="speedRight">
+                            <input type="number" name="kilometers2" id="kilometers2" /> <br>
+                            <input type="hidden" name="miles2" id="miles2" />
                         </div>
                         <div class="item">
                             <label for="consoRight">Consommation</label>
